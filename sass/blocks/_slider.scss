@@ -1,0 +1,237 @@
+.slider {
+    width: 770px;
+    padding: 0 0 54px;
+    position: relative;
+
+    .slider__text {
+        width: 770px;
+        margin: 0 auto 30px;
+
+        /* Tablet */
+        @media (max-width: 1199px) {        
+            width: 720px;       
+        }
+
+          /* Mobile */
+        @media (max-width: 899px) {
+            width: 370px;  
+            margin-bottom: 20px;         
+        }
+
+         /* Mobile XS */
+        @media (max-width: 599px) {
+            width: 290px;
+        }
+    }
+    
+    
+    /* Tablet */
+    @media (max-width: 1199px) {
+        //width: 720px; 
+        padding: 0 0 54px;            
+    }
+
+    /* Mobile */
+    @media (max-width: 899px) {
+        width: 370px;       
+        padding-bottom: 44px;
+    }
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+        width: 290px;
+    }
+}
+
+.slider__arrow-left {
+    position: absolute;
+    top: 51px;
+    // left: 0;
+    left: -46px;
+    // transform: translateX(-100%);
+    width: 54px;
+    height: 54px;
+    line-height: 54px;   
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in, stroke 0.2s ease-in;
+
+    svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+        background-color: #00C470;
+    }
+
+    &:hover path {
+        stroke: #fff;
+    }
+
+    /* Tablet */
+    @media (max-width: 1199px) {
+        left: -46px;
+    }
+
+    /* Mobile */
+    @media (max-width: 899px) {
+        left: -46px;
+        top: 67px;
+    }
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+        display: none;
+    }
+}
+
+.slider__arrow-right {
+    position: absolute;
+    top: 51px;
+    right: -46px;
+    // transform: translateX(100%);
+    width: 54px;
+    height: 54px;
+    line-height: 54px;    
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in, stroke 0.2s ease-in;
+
+    svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+        background-color: #00C470;
+    }
+
+    &:hover path {
+        stroke: #fff;
+    }
+
+    /* Tablet */
+    @media (max-width: 1199px) {
+        right: -46px;
+    }
+
+    /* Mobile */
+    @media (max-width: 899px) {
+        right: -46px;
+        top: 67px;
+    }
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+        display: none;
+    }
+}
+
+.slider__text {
+    width: 100%;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 2;
+    text-align: center;
+    color: #000000;
+
+    /* Tablet */
+    @media (max-width: 1199px) {
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+
+    /* Mobile */
+    @media (max-width: 899px) {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+        font-size: 14px;
+    }
+}
+
+.slider__author-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;       
+}
+
+.slider__avatar {   
+    margin-right: 20px;  
+
+    img {      
+        width: 80px;
+        height: 80px;   
+        border-radius: 50%;        
+    }
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+        margin-right: 10px;
+
+        img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
+
+.slider__description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    .slider__post { 
+        margin-bottom: 5px;     
+        color: #00C470;        
+    }
+
+    .slider__name {
+        color: $paragraphColor;
+    }
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+.slider__pagination {
+    display: flex;
+    position: absolute;
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%);   
+}
+
+.slider__link {
+    width: 14px;
+    height: 14px;  
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #E1E1E1;
+
+    &:hover {
+        background-color: #d4d3d3;
+    }
+
+    &--active, &--active:hover {
+        background-color: #00C470;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}

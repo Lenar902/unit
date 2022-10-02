@@ -1,0 +1,91 @@
+$width: 60px;
+$height: 60px;
+
+$lineWidth: 20px;
+$lineHeight: 3px;
+
+$radius: 2px;
+$lineMargin: 4px;
+
+
+.nav-icon {
+    position: relative;
+    z-index: 25;
+    width: $width;
+    height: $height;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #FFFFFF; 
+    transition: background-color 0.2s ease-in;
+
+    &:hover {
+      background-color: #00C470;
+      .nav-icon__item, 
+      .nav-icon__item::before,
+      .nav-icon__item::after {
+        background-color: #FFFFFF;
+      }
+    }
+    
+    &:focus {
+        background-color: #06e082;
+        .nav-icon__item, 
+        .nav-icon__item::before,
+        .nav-icon__item::after {
+          background-color: #FFFFFF;
+        }
+    }
+
+    &--active {
+      position: fixed;
+    }
+  }
+  
+  .nav-icon__item {    
+    position: relative;
+    width: $lineWidth;
+    height: $lineHeight;
+    background-color: #000;
+    cursor: pointer;
+    border-radius: $radius;
+  }
+  
+  .nav-icon__item::before,
+  .nav-icon__item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: $lineWidth;
+    height: $lineHeight;
+    background-color: #000;
+    border-radius: $radius;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  }
+  
+  .nav-icon__item::before {
+    top: -($lineHeight + $lineMargin); //-7px; 
+  }
+  
+  .nav-icon__item::after { 
+    top: $lineHeight + $lineMargin; //7px;
+  }
+  
+  .nav-icon.nav-icon--active .nav-icon__item {
+    background-color: transparent;
+  }
+  
+  .nav-icon.nav-icon--active .nav-icon__item::before {
+    transform: rotate(45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+  
+  .nav-icon.nav-icon--active .nav-icon__item::after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }

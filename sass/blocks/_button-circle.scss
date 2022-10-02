@@ -1,0 +1,23 @@
+.button-circle {
+    position: relative;
+    z-index: 9;
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    background: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+
+.button-circle:hover {
+    background-color: #00C470;
+}
+
+.button-circle:focus {
+    background-color: #06e082;
+}

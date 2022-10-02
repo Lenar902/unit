@@ -1,0 +1,28 @@
+.button-solid { 
+    height: 60px; 
+    padding-left: 40px;
+    padding-right: 40px;
+
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 60px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    background-color: #fff;
+    border-radius: 30px;    
+    color: $colorText;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in, color 0.2s ease-in;
+
+    &:hover { 
+        background-color: #333;
+        color: #fff;       
+    }
+
+    &:focus {
+        background-color: #000;
+        color: #fff;       
+    }
+}
+
